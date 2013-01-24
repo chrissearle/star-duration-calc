@@ -19,7 +19,7 @@ server = http.createServer (req, res) ->
                 res.writeHead 500
                 res.end()
             else
-                res.writeHead 200, { 'Content-Type': 'text/html' }
+                res.writeHead 200, { 'Content-Type': 'text/javascript' }
                 res.end content, 'utf-8'
     else if u.pathname == '/calc'
         fl = u.query.focallength

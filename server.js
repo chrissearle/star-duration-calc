@@ -30,7 +30,7 @@
           return res.end();
         } else {
           res.writeHead(200, {
-            'Content-Type': 'text/html'
+            'Content-Type': 'text/javascript'
           });
           return res.end(content, 'utf-8');
         }
