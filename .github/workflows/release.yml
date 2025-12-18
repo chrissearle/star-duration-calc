@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v*
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ github.token }}
+
+      - name: Tag release from staging
+        run: |
+          docker buildx imagetools create \
+            --tag ghcr.io/${{ github.repository_owner }}/star-duration-calc:release \
+            ghcr.io/${{ github.repository_owner }}/star-duration-calc:staging
+
+          docker buildx imagetools create \
+            --tag ghcr.io/${{ github.repository_owner }}/star-duration-calc:${{ github.ref_name }} \
+            ghcr.io/${{ github.repository_owner }}/star-duration-calc:staging
+
