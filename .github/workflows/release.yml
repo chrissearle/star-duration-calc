@@ -29,4 +29,3 @@ jobs:
           docker buildx imagetools create \
             --tag ghcr.io/${{ github.repository_owner }}/star-duration-calc:${{ github.ref_name }} \
             ghcr.io/${{ github.repository_owner }}/star-duration-calc:staging
-

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useCalcStore} from "~/stores/calcStore"
+import { useCalcStore } from "~/stores/calcStore"
 import * as v from "valibot"
 
 const calcStore = useCalcStore()
@@ -10,10 +10,10 @@ const schema = v.object({
 })
 
 const cameraPresets = [
-  {name: "Nikon D700", pixelSize: "0.00845"},
-  {name: "Nikon D4s", pixelSize: "0.00728"},
-  {name: "Sony A7 III", pixelSize: "0.00594"},
-  {name: "Sony A7R VI", pixelSize: "0.00376"},
+  { name: "Nikon D700", pixelSize: "0.00845" },
+  { name: "Nikon D4s", pixelSize: "0.00728" },
+  { name: "Sony A7 III", pixelSize: "0.00594" },
+  { name: "Sony A7R VI", pixelSize: "0.00376" },
 ] as const
 
 function applyPreset(pixelSize: string) {
@@ -37,10 +37,10 @@ function applyPreset(pixelSize: string) {
               </div>
 
               <UButton
-                  color="gray"
-                  variant="soft"
-                  icon="i-heroicons-trash"
-                  @click="calcStore.clear()"
+                color="gray"
+                variant="soft"
+                icon="i-heroicons-trash"
+                @click="calcStore.clear()"
               >
                 Clear
               </UButton>
@@ -51,19 +51,19 @@ function applyPreset(pixelSize: string) {
           <UForm :schema="schema" :state="calcStore" class="space-y-4 mb-8">
             <UFormField label="Focal Length" name="focalLength" hint="mm">
               <UInput
-                  v-model="calcStore.focalLength"
-                  inputmode="decimal"
-                  placeholder="e.g. 50"
-                  icon="i-heroicons-arrows-right-left"
+                v-model="calcStore.focalLength"
+                inputmode="decimal"
+                placeholder="e.g. 50"
+                icon="i-heroicons-arrows-right-left"
               />
             </UFormField>
 
             <UFormField label="Pixel Size" name="pixelSize" hint="mm">
               <UInput
-                  v-model="calcStore.pixelSize"
-                  inputmode="decimal"
-                  placeholder="e.g. 0.00594"
-                  icon="i-heroicons-camera"
+                v-model="calcStore.pixelSize"
+                inputmode="decimal"
+                placeholder="e.g. 0.00594"
+                icon="i-heroicons-camera"
               />
             </UFormField>
           </UForm>
@@ -73,9 +73,9 @@ function applyPreset(pixelSize: string) {
           <!-- Presets -->
           <div class="space-y-2">
             <div
-                v-for="c in cameraPresets"
-                :key="c.name"
-                class="flex items-center justify-between rounded-lg border border-gray-200 p-3 dark:border-gray-800"
+              v-for="c in cameraPresets"
+              :key="c.name"
+              class="flex items-center justify-between rounded-lg border border-gray-200 p-3 dark:border-gray-800"
             >
               <div>
                 <p class="font-medium">{{ c.name }}</p>
@@ -85,11 +85,11 @@ function applyPreset(pixelSize: string) {
               </div>
 
               <UButton
-                  size="xs"
-                  color="gray"
-                  variant="soft"
-                  icon="i-heroicons-arrow-right"
-                  @click="applyPreset(c.pixelSize)"
+                size="xs"
+                color="gray"
+                variant="soft"
+                icon="i-heroicons-arrow-right"
+                @click="applyPreset(c.pixelSize)"
               >
                 Use
               </UButton>
@@ -105,25 +105,42 @@ function applyPreset(pixelSize: string) {
 
           <div v-if="calcStore.result" class="space-y-4">
             <div class="rounded-lg bg-gray-50 p-4 dark:bg-gray-900/40">
-              <p class="text-sm text-gray-500 dark:text-gray-400">Arc minutes per mm</p>
-              <p class="text-lg font-semibold">{{ calcStore.arcMinutesPerMm }}</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Arc minutes per mm
+              </p>
+              <p class="text-lg font-semibold">
+                {{ calcStore.arcMinutesPerMm }}
+              </p>
             </div>
 
             <div class="rounded-lg bg-gray-50 p-4 dark:bg-gray-900/40">
-              <p class="text-sm text-gray-500 dark:text-gray-400">Arc seconds per mm</p>
-              <p class="text-lg font-semibold">{{ calcStore.arcSecondsPerMm }}</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Arc seconds per mm
+              </p>
+              <p class="text-lg font-semibold">
+                {{ calcStore.arcSecondsPerMm }}
+              </p>
             </div>
 
             <div class="rounded-lg bg-gray-50 p-4 dark:bg-gray-900/40">
-              <p class="text-sm text-gray-500 dark:text-gray-400">Arc seconds per pixel</p>
-              <p class="text-lg font-semibold">{{ calcStore.arcSecondsPerPixel }}</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Arc seconds per pixel
+              </p>
+              <p class="text-lg font-semibold">
+                {{ calcStore.arcSecondsPerPixel }}
+              </p>
             </div>
 
             <div class="rounded-lg bg-gray-50 p-4 dark:bg-gray-900/40">
-              <p class="text-sm text-gray-500 dark:text-gray-400">Max Exposure Length</p>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                Max Exposure Length
+              </p>
               <p class="text-lg font-semibold">
                 {{ calcStore.maxExposureLength }}
-                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">seconds</span>
+                <span
+                  class="text-sm font-normal text-gray-500 dark:text-gray-400"
+                  >seconds</span
+                >
               </p>
             </div>
           </div>

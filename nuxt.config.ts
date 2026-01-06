@@ -6,12 +6,7 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
 
-  modules: [
-    "@nuxt/icon",
-    "@nuxt/ui",
-    "@nuxt/eslint",
-    "@pinia/nuxt",
-  ],
+  modules: ["@nuxt/icon", "@nuxt/ui", "@nuxt/eslint", "@pinia/nuxt"],
 
   css: ["~/assets/main.css"],
 
@@ -19,14 +14,14 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/version'],
+      routes: ["/version"],
       crawlLinks: false,
     },
   },
 
   runtimeConfig: {
     public: {
-      imageTag: ''
+      imageTag: "",
     },
   },
 })
