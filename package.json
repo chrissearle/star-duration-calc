@@ -36,7 +36,7 @@
     "lint-staged": "^16.2.7",
     "tailwindcss": "4.2.1"
   },
-  "packageManager": "pnpm@10.30.2",
+  "packageManager": "pnpm@10.30.3",
   "lint-staged": {
     "*.{js,ts,vue}": "pnpm lint:fix"
   }
