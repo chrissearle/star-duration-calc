@@ -32,8 +32,8 @@
     "vue-router": "5.0.3"
   },
   "devDependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.7",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.7",
     "tailwindcss": "4.2.1"
   },
   "packageManager": "pnpm@10.30.3",
