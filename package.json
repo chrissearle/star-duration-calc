@@ -34,7 +34,7 @@
   "devDependencies": {
     "husky": "9.1.7",
     "lint-staged": "16.4.0",
-    "tailwindcss": "4.2.1"
+    "tailwindcss": "4.2.2"
   },
   "packageManager": "pnpm@10.32.1",
   "lint-staged": {
