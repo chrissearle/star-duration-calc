@@ -1,13 +1,11 @@
 # syntax=docker/dockerfile:1.23
 
-FROM --platform=$BUILDPLATFORM node:24-bookworm-slim AS build
+FROM --platform=$BUILDPLATFORM node:26-trixie-slim AS build
 
 ARG IMAGE_TAG
 ENV NUXT_PUBLIC_IMAGE_TAG=$IMAGE_TAG
 
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
-RUN corepack enable
+RUN npm install -g pnpm
 
 WORKDIR /app
 
@@ -19,7 +17,7 @@ COPY . .
 
 RUN pnpm run build
 
-FROM node:24-bookworm-slim AS deploy
+FROM node:26-trixie-slim AS deploy
 
 ARG IMAGE_TAG
 ENV NUXT_PUBLIC_IMAGE_TAG=$IMAGE_TAG
