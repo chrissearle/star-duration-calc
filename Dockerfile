@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.23
 
-FROM --platform=$BUILDPLATFORM node:26-trixie-slim AS build
+FROM node:26-trixie-slim AS build
 
 ARG IMAGE_TAG
 ENV NUXT_PUBLIC_IMAGE_TAG=$IMAGE_TAG
