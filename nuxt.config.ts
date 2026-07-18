@@ -24,4 +24,10 @@ export default defineNuxtConfig({
       imageTag: "",
     },
   },
+
+  vite: {
+    optimizeDeps: {
+      include: ["valibot"],
+    },
+  },
 })

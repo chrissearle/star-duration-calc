@@ -22,7 +22,7 @@ There are no tests. Pre-commit hooks (Husky + lint-staged) run `pnpm lint:fix` o
 
 - **Nuxt 4** (`future.compatibilityVersion: 4`) with SSR enabled
 - **@nuxt/ui** (v4) + **Tailwind CSS v4** for UI components and styling
-- **Pinia** with `pinia-plugin-persistedstate` — store state persists across page loads
+- **Pinia** for the calculator's reactive state
 - **Valibot** for form validation on the main page
 - **mise** manages Node (26) and pnpm (11) versions
 
@@ -34,8 +34,6 @@ All app code lives under `app/` (Nuxt 4 convention):
 - `app/pages/index.vue` — main calculator UI; reads/writes the store directly; camera presets are hardcoded here
 - `app/pages/version.vue` — pre-rendered at build time; reads `NUXT_PUBLIC_IMAGE_TAG` (set via Docker `ARG IMAGE_TAG`)
 - `app/components/nav/index.vue` — top navigation bar
-
-The calculator UI is wrapped in `<ClientOnly>` because the store uses `pinia-plugin-persistedstate` (localStorage), which requires the browser.
 
 ## ESLint config
 
