@@ -16,7 +16,7 @@
   "dependencies": {
     "@artmizu/nuxt-prometheus": "3.0.3",
     "@nuxt/eslint": "1.16.0",
-    "@nuxt/icon": "2.3.1",
+    "@nuxt/icon": "2.4.1",
     "@nuxt/ui": "4.10.0",
     "@pinia/nuxt": "1.0.1",
     "eslint": "10.8.0",
