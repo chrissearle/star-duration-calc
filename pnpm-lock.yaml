@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@artmizu/nuxt-prometheus':
-        specifier: 3.0.3
-        version: 3.0.3
+        specifier: 3.0.4
+        version: 3.0.4
       '@nuxt/eslint':
         specifier: 1.16.0
         version: 1.16.0(@typescript-eslint/utils@8.63.0(eslint@10.8.0(jiti@2.7.0)(supports-color@10.2.2))(supports-color@10.2.2)(typescript@6.0.3))(@vue/compiler-sfc@3.5.40)(crossws@0.4.10(srvx@0.11.22))(esbuild@0.28.1)(eslint@10.8.0(jiti@2.7.0)(supports-color@10.2.2))(magic-string@1.0.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.0)(rollup@4.62.2)(supports-color@10.2.2)(typescript@6.0.3)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.0)(rollup@4.62.2)(vite@8.1.5(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0)))(vite@8.1.5(esbuild@0.28.1)(jiti@2.7.0)(terser@5.49.0)(yaml@2.9.0))
@@ -82,8 +82,8 @@ packages:
     peerDependencies:
       '@types/json-schema': ^7.0.15
 
-  '@artmizu/nuxt-prometheus@3.0.3':
-    resolution: {integrity: sha512-N18D8cpHPVy3lP1YUIrOh2/qU03VmWTV3r7PHI/omrtm8BJnqbaHvZ1jAdyt2B99vJsVdFyY93XlyMh1sSSD0Q==}
+  '@artmizu/nuxt-prometheus@3.0.4':
+    resolution: {integrity: sha512-VChGTV0ERVXDXOsSiL3i6B6D6LB/ylmLXH8kjzchhDGoE53Et1ta4smZrdBCCRKVRdX3M+knXb3/Q6NuCygqmQ==}
 
   '@babel/code-frame@7.29.7':
     resolution: {integrity: sha512-Aup7aUOfpbAUg2ROOJN6Iw5f9DMBlzu0mIkm/malLQFN/YQgO48wCj0Kxa3sEHJvPVFg7siR+qRInwXd2qhQKw==}
@@ -5625,7 +5625,7 @@ snapshots:
       '@types/json-schema': 7.0.15
       js-yaml: 4.3.0
 
-  '@artmizu/nuxt-prometheus@3.0.3':
+  '@artmizu/nuxt-prometheus@3.0.4':
     dependencies:
       '@mswjs/interceptors': 0.41.9
       consola: 3.4.2
