@@ -28,7 +28,7 @@
     "typescript": "6.0.3",
     "valibot": "1.4.2",
     "vue": "3.5.42",
-    "vue-router": "5.2.0"
+    "vue-router": "5.3.0"
   },
   "devDependencies": {
     "@iconify-json/heroicons": "^1.2.3",
