@@ -41,7 +41,7 @@
     "tailwindcss": "4.3.5",
     "vue-tsc": "3.3.14"
   },
-  "packageManager": "pnpm@12.18.0",
+  "packageManager": "pnpm@12.20.0",
   "lint-staged": {
     "*.{js,mjs,ts,vue}": "pnpm lint:fix",
     "*.{md,json,css,yml,yaml}": "prettier --write --ignore-unknown"
